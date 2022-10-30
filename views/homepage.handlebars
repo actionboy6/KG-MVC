@@ -1,0 +1,16 @@
+<div>
+    <h2>Check out our reviews on tech products</h2>
+</div>
+
+{{#each reviews as |review| }}
+<div class="row-mb-4">
+    <div class="col-md-5">
+        <h2>
+            <a href="/reviews/{{review.id}}" class="title">{{review.title}}</a>
+        </h2>
+    </div>
+    <div class="col-md-5">
+        <p>Created by {{review.user.name}} on {{format_date review.date_created}}</p>
+    </div>
+</div>
+{{/each}}
